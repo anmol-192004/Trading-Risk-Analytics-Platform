@@ -16,8 +16,8 @@ const db = mysql.createConnection({
 });
 
 db.connect(err => {
-  if (err) console.error('❌ Database connection failed:', err);
-  else console.log('✅ Connected to MySQL database!');
+  if (err) console.error('Database connection failed:', err);
+  else console.log('Connected to MySQL database!');
 });
 
 app.get('/', (req, res) => {
@@ -145,5 +145,5 @@ app.get('/api/sector-exposure', (req, res) => {
 
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Trading Analytics Platform running on http://localhost:${PORT}`);
+  console.log(`Trading Analytics Platform running on http://localhost:${PORT}`);
 });
